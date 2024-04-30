@@ -167,8 +167,8 @@ Concretize["SendMail", "Send email to joedoe@gmail.com with content RandomReal[3
 ### Functions, packages, repositories
 
 [AAr1] Anton Antonov,
-[DSL::Shared::Utilities::ComprehensiveTranslation Raku package](https://github.com/antononcube/Raku-DSL-Shared-Utilities-ComprehensiveTranslation),
-(2020),
+[DSL::Translators Raku package](https://github.com/antononcube/Raku-DSL-Translators),
+(2020-2024),
 [GitHub/antononcube](https://github.com/antononcube).
 
 [ECE1] Edument Central Europe s.r.o.,
@@ -184,4 +184,9 @@ Concretize["SendMail", "Send email to joedoe@gmail.com with content RandomReal[3
 [AAv1] Anton Antonov,
 ["NLP Template Engine, Part 1"](https://youtu.be/a6PvmZnvF9I),
 (2021),
-[Simplified Machine Learning Workflows at YouTube](https://www.youtube.com/playlist?list=PLke9UbqjOSOi1fc0NkJTdK767cL9XHJF0).
+[YouTube/@AAA4Prediction](https://www.youtube.com/@AAA4Prediction).
+
+[AAv2] Anton Antonov,
+["Natural Language Processing Template Engine"](https://www.youtube.com/watch?v=IrIW9dB5sRM) presentation given at WTC-2022,
+(2023),
+[YouTube/@Wolfram](https://www.youtube.com/@Wolfram).
