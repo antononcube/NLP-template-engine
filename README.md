@@ -4,7 +4,7 @@
 
 This repository provides implementation, data, and documentation of a Natural Language Processing (NLP) 
 [Template Engine (TE)](https://en.wikipedia.org/wiki/Template_processor), [Wk1], 
-that utilized
+that utilizes
 [Question Answering Systems (QAS')](https://en.wikipedia.org/wiki/Question_answering), [Wk2],
 and Machine Learning (ML) classifiers.
 
