@@ -110,7 +110,7 @@ Here is an interactive interface that gives "online" access to the functionaliti
 
 ## How it works?
 
-The following flowchart describes how the NLP Template Engine  involves a series of steps for processing a computation specification and executing code to obtain results:
+The following flowchart describes how the NLP Template Engine involves a series of steps for processing a computation specification and executing code to obtain results:
 
 ```mermaid
 flowchart TD
