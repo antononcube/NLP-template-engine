@@ -108,6 +108,61 @@ Here is an interactive interface that gives "online" access to the functionaliti
 
 ------
 
+## How it works?
+
+The following flowchart describes how the NLP Template Engine  involves a series of steps for processing a computation specification and executing code to obtain results:
+
+```mermaid
+flowchart TD
+  spec[/Computation spec/] --> workSpecQ{Is workflow type<br>specified?}
+  workSpecQ --> |No| guess[[Guess relevant<br>workflow type]]
+  workSpecQ -->|Yes| raw[Get raw answers]
+  guess -.- classifier{{Classifier:<br>text to workflow type}}
+  guess --> raw
+  raw --> process[Process raw answers]
+  process --> template[Complete<br>computation<br>template]
+  template --> execute[/Executable code/]
+  execute --> results[/Computation results/]
+
+  subgraph questionSystem["Question answering system"]
+    neuralNet{{Neural network}} -.-> find[[FindTextualAnswer]]
+  end
+
+  find --> raw
+  raw --> find
+  template -.- compData[(Computation<br>templates<br>data)]
+  compData -.- process
+
+  classDef highlighted fill:Salmon,stroke:Coral,stroke-width:2px;
+  class spec,results highlighted
+```
+
+Here's the narrative for each component and the flow of processes:
+
+1. **Computation Spec**: The process begins with a computation specification, which is a plan or requirement for a computation task.
+
+2. **Workflow Type Decision**: The diagram queries whether the workflow type is specified. If the workflow type is not specified, the system proceeds to guess the relevant workflow type.
+
+3. **Guess Workflow Type**: If the workflow type needs to be guessed the type is then classified by a classifier which categorizes the text into a specific workflow type. 
+   
+4. **Raw Answers**:
+   - Whether the workflow type is specified directly or guessed, the system proceeds to acquire raw answers.
+   - This node acts as a central point where either directly specified or guessed information leads to the collection of raw answers through an iterative process with `FindTextualAnswer` within the "Question answering system".
+
+5. **Question Answering System**:
+   - The "Question answering system" component has a neural network to process data, and its output is utilized to find textual answers.
+
+6. **Process Raw Answers**: The raw answers are then processed to extract or format the necessary information for further steps.
+
+7. **Complete Computation Template**:
+   - The processed data is used to complete a computation template, which is crucial for preparing the executable code.
+   - This template completion step accesses a database of computation templates data.
+
+8. **Executable Code and Results**:
+   - The completed template leads to the generation of executable code, which then *can be* run to produce computation results.
+
+------
+
 ## Bring your own templates
 
 0. Load the NLP-Template-Engine
